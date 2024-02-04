@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./common.css">
+    <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT/fonts/static/woff2/SUIT.css" rel="stylesheet">
+</head>
+<body class="pop_bg">
+    <!-- 예약 완료 하단 팝업 -->
+    <div class="container">
+        <div class="inner bottom_btn">
+
+
+
+        </div>
+    </div>
+
+    <!-- 하단 팝업 -->
+    <div class="bottom_pop">
+        <span class="close_btn"></span>
+        <img src="./img/ico_people.png">
+        <p class="pop_title"> 가족 구성원에게 <br><b class="main_color">예약</b>을 공유 하시겠어요?</p>
+        <p class="pop_txt">공유하시는 연락처를 정확하게 확인해 주세요.</p>
+        <div class="pop_bx_title">NAAFAA는 예약 중개자로서 관련 항목에 대한 책임이 없습니다.</div>
+        <div class="pop_lay">
+            <p class="pop_tit">공유 방법</p>
+            <div class="flex_bx">
+                <div class="pop_btn share_btn">링크공유</div>
+                <div class="pop_btn kakao_btn">카카오톡 공유</div>
+            </div>  
+        </div>
+    </div>
+    <script>
+        window.onload = function(){
+            document.querySelector('.bottom_pop').classList.add('active');
+        }
+    </script>
+
+    <style>
+        .container {
+            min-height: 100vh;
+        }
+        .inner {
+            padding:0 20px;
+        }
+        .bottom_btn {
+            padding-bottom:120px
+        }
+        .main_color {
+            color:#3983A0;
+        }
+        .pop_bg {
+            height: 100vh;
+            overflow: hidden;
+        }
+        .pop_bg::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background:#000;
+            opacity: 0.7;
+        }
+
+        .bottom_pop {
+            position:fixed;
+            bottom:-100%; left:0;
+            width:100%;
+            padding:35px 20px 30px;
+            text-align: center;
+            border-radius: 28px 28px 0px 0px;
+            background:#fff;
+            transition: all .6s;
+            z-index: 1;
+        }
+        .bottom_pop.active {bottom:0;}
+
+        .close_btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: inline-block;
+            width:15px;
+            height:15px;
+            background:url(./img/ico_close.png)no-repeat;
+            background-size: cover;
+        }
+        .pop_title {
+            margin:20px 0;
+            font-size: 18px;
+            font-weight: 700;
+        }
+        .pop_txt {
+            font-size: 15px;
+            color: #666;
+        }
+        .pop_bx_title {
+            padding:10px 15px;
+            margin-top: 20px;
+            font-size: 12px;
+            font-weight: 500;
+            border-radius: 6px;
+            border: 1px solid #E4E5EB;
+            color: #999;
+            background: #F2F3F7;
+        }
+        .pop_lay {
+            margin-top: 40px;
+        }
+        .pop_lay .flex_bx {
+            display: flex;
+            column-gap: 10px;
+        }
+        .pop_tit {
+            margin-bottom: 18px;
+            font-size: 16px;
+            font-weight: 700;
+            text-align: start;
+        }
+        .pop_btn {
+            flex:1;
+            padding:15px 0;
+            font-size: 16px;
+            font-weight: 500;
+            border-radius: 6px;
+            border: 1px solid #E4E5EB;
+            background: #FFF;
+        }
+        .pop_btn.share_btn::before {
+            content:'';
+            display: inline-block;
+            width:18px; height:18px;
+            margin-right: 6px;
+            vertical-align: middle;
+            background: url(./img/ico_share.png)no-repeat;
+        }
+        .pop_btn.kakao_btn::before {
+            content:'';
+            display: inline-block;
+            width:22px; height:22px;
+            margin-right: 6px;
+            vertical-align: middle;
+            background: url(./img/ico_kakao.png)no-repeat;
+        }
+    </style>
+</body>
+</html>

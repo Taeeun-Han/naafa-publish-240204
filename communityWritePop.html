@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./common.css">
+    <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT/fonts/static/woff2/SUIT.css" rel="stylesheet">
+</head>
+<body class="pop_bg"> 
+    <!-- 커뮤니티 새글 작성 팝업 -->
+    <div class="container">
+        <div class="top_header"><span class="prev"></span>새글 작성</div>
+        <div class="inner">
+            <div class="bx_wrap">
+                <textarea class="text_area" placeholder="공유하고 싶은 이야기를 작성해 주세요."></textarea>
+            </div>
+        </div>  
+        
+    </div>
+
+    <div class="fixed_chat">
+        <div class="chat_field">
+            <img src="./img/chat_camera.png">
+            <img src="./img/chat_picture.png">
+            <input type="text" placeholder="메세지를 입력해주세요">
+            <div class="input_btn">업데이트</div>
+        </div>
+    </div>
+
+    <div class="bottom_pop">
+        <span class="close_btn"></span>
+        <p class="pop_title">콘텐츠 작성 시 닉네임을<br>사용하실 수 있어요.</p>
+        <p class="pop_txt"><span class="main_color">닉네임을 사용하시길 원하시면 등록해 주세요.</span></p>
+        <div class="pop_lay">
+            <div class="pop_input_bx">
+                <p class="pop_tit">신규 닉네임</p>
+                <input type="text" placeholder="닉네임을 입력해 주세요 (특수문자 불가)">
+                <p class="err_msg">다른 닉네임을 입력해 주세요.</p>
+            </div>
+            <div class="bx_2_btn">
+                <div class="btn">본명을 사용할께요</div>
+                <div class="btn active">닉네임 설정</div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        window.onload = function(){
+            document.querySelector('.bottom_pop').classList.add('active');
+        }
+    </script>
+     
+    <!-- style -->
+    <style>
+        .container {
+            min-height: 100vh;
+        }
+        .pop_bg {
+            height: 100vh;
+            overflow: hidden;
+        }
+        .pop_bg::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background:#000;
+            opacity: 0.7;
+        }
+        .inner {
+            padding:0 20px;
+        }
+        .main_color {
+            color:#3983A0;
+        }
+        .bottom_btn {
+            padding-bottom:120px
+        }
+
+        .top_header {
+            position: relative;
+            padding: 15px 0;
+            font-size: 16px;
+            font-weight: 500;
+            text-align: center;
+            color: #333;
+        }
+        .top_header .prev {
+            position: absolute;
+            top: 50%; left: 20px;
+            height: 15px;
+            width: 7px;
+            background: url(./img/ico_prev.png)no-repeat;
+            background-size: cover;
+            transform: translateY(-50%);
+        }
+
+        .bx_wrap {padding: 20px 0;}
+        .text_area {
+            display: block;
+            width: 100%;
+            min-height: 400px;
+            padding: 25px;
+            font-size: 16px;
+            font-weight: 600;
+            outline: none;
+            border-radius: 10px;
+            border: 1px solid #DDD;
+            background: #FFF;
+        }
+        .text_area::placeholder {color: #999;}
+
+        .fixed_chat {
+            width: 100%;
+            position: absolute;
+            bottom: 0px; 
+        }
+        .fixed_chat .chat_field {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            padding: 10px 5px;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 0.3px;
+            color: #9EA6AC;
+            background: #F2F3F7;
+            transition: all .3s;
+            outline: none;
+            border: 0;
+        }
+        .chat_field input {
+            background:none;
+            border: 0;
+            outline: none;
+            padding-left: 15px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .chat_field input::placeholder {color: #9EA6AC;}
+        .input_btn {
+            padding: 10px 15px;
+            white-space: nowrap;
+            border-radius: 6px;
+            background: #BEC2D4;
+            color: #fff;
+        }
+
+        .bottom_pop {
+            position:fixed;
+            bottom:-100%; left:0;
+            width:100%;
+            padding:35px 20px 30px;
+            text-align: center;
+            border-radius: 28px 28px 0px 0px;
+            background:#fff;
+            transition: all .6s;
+            z-index: 1;
+        }
+        .bottom_pop.active {bottom:0;}
+
+        .close_btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: inline-block;
+            width:15px;
+            height:15px;
+            background:url(./img/ico_close.png)no-repeat;
+            background-size: cover;
+        }
+        .pop_title {
+            margin:20px 0;
+            font-size: 18px;
+            font-weight: 700;
+        }
+        .pop_txt {
+            font-size: 15px;
+            color: #666;
+        }
+        .pop_bx_title {
+            padding:10px 15px;
+            margin-top: 20px;
+            font-size: 12px;
+            font-weight: 500;
+            border-radius: 6px;
+            border: 1px solid #E4E5EB;
+            color: #999;
+            background: #F2F3F7;
+        }
+        .err_msg {
+            margin-top: 13px;
+            text-align: start;
+            font-size: 13px;
+            font-weight: 500;
+            color: #eb4747;
+        }
+        .pop_lay {
+            margin-top: 40px;
+        }
+        .pop_lay .flex_bx {
+            display: flex;
+            column-gap: 10px;
+        }
+        .pop_tit {
+            margin-bottom: 18px;
+            font-size: 16px;
+            font-weight: 700;
+            text-align: start;
+        }
+        .bx_2_btn {
+            display: flex;
+            column-gap: 10px;
+        }
+        .bx_2_btn .btn {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 0;
+            font-size: 16px;
+            text-align: center;
+            font-weight: 500;
+            letter-spacing: 0.048px;
+            border-radius: 6px;
+            border: 1px solid #E4E5EB;
+            color: #6D767D;
+        }
+        .bx_2_btn .btn.active {
+            border: 0;
+            color: #fff;
+            background: #3983A0;
+        }
+
+        .pop_input_bx {margin-bottom: 65px;}
+        input {
+            width:100%;
+            padding: 15px 20px;
+            font-size: 14px;
+            font-weight: 500;
+            border-radius: 6px;
+            border: 1px solid #E4E5EB;
+            box-sizing: border-box;
+            background: #FFF;
+        }
+        input::placeholder {
+            color: #999;
+        }
+    </style>
+</body>
+</html>

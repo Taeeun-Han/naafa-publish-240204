@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./common.css">
+    <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT/fonts/static/woff2/SUIT.css" rel="stylesheet">
+</head>
+<body>
+    
+    <!-- 약관 동의 -->
+    <div class="container">
+        <div class="inner">
+            <div class="sub_title">
+                <h3>약관 동의</h3>
+                <span>서비스 가입을 위해 고객님의<br>약관 동의가 필요합니다.</span>
+            </div>
+            <div class="agree_bx">
+                <p class="all_agree">약관 전체동의</p>
+                <div class="agree_select">
+                    <div id="required" class="agree_btn"><span>서비스 이용약관 (필수)</span><a>보기</a></div>
+                    <div id="required" class="agree_btn"><span>개인정보 수집 및 이용약관 (필수)</span><a>보기</a></div>
+                    <div id="required" class="agree_btn"><span>만 14세 이상입니다 (필수)</span><a>보기</a></div>
+                    <div class="agree_btn"><span>마케팅 활용 광고 수신 동의 (선택)</span><a>보기</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="full_bx"><div class="full_btn">동의하고 시작하기</div></div>
+
+    <script>
+        /** 약관 전체동의 **/  
+        const allAgree = document.querySelector('.all_agree');
+
+        const agreeBtn = document.querySelectorAll('.agree_btn');
+        const agreeBtnArray = Array.from(agreeBtn);
+
+        allAgree.addEventListener('click',function(){
+
+            if(allAgree.classList.contains('active')){
+  
+                this.classList.remove('active');
+
+                document.querySelector('.full_btn').classList.remove('active');
+
+                    agreeBtnArray.some(function(item){
+
+                    item.classList.remove('active');
+
+                })
+
+            } else {
+
+                this.classList.add('active');
+
+                document.querySelector('.full_btn').classList.add('active');
+
+                    agreeBtnArray.some(function(item){
+
+                    item.classList.add('active');
+
+                })
+
+            }
+
+        })
+
+        agreeBtn.forEach((v, i, a)=>{
+
+            agreeBtn[i].addEventListener("click",function(){
+
+                agreeBtnArray.some(function(item){
+
+                    agreeBtn[i].classList.add('active');
+                    
+                });
+
+            })
+        })
+
+    </script>
+
+    <!-- style -->
+    <style>
+        .container {
+            min-height: 100vh;
+        }
+        .inner {
+            padding:0 20px;
+        }
+        .bottom_btn {
+            padding-bottom:120px;
+        }
+
+        .sub_title {
+            padding-top:87px;
+            padding-bottom:20px;
+        }
+        .sub_title h3 {
+            margin-bottom: 18px;
+            font-size:28px;
+            font-weight:700;
+            letter-spacing: 0.084px;
+        }
+        .sub_title span {
+            font-size:14px;
+            font-weight:500;
+            color:#999;
+        }
+
+        .agree_bx {
+            margin-top: 120px;
+        } 
+        .all_agree {
+            padding-bottom:20px;
+            font-size:16px;
+            font-weight: 700;
+            border-bottom:1px solid #eee;
+            color: #666;
+        }
+        .all_agree::before {
+            content:''; 
+            display: inline-block;
+            width:24px;
+            height:24px;
+            margin-right: 8px;
+            vertical-align: middle;
+            background: url(./img/round_chk.png)no-repeat;
+        }
+        .all_agree.active::before {
+            background: url(./img/round_chk_active.png)no-repeat;
+        }
+        .agree_select {margin-top: 30px;}
+        .agree_btn {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            padding-left: 35px;
+            margin-bottom: 20px;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .agree_btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            display: inline-block;
+            width:24px;
+            height: 24px;
+            background: url(./img/check_gray.png) no-repeat;
+            transform: translateY(-50%);
+        }
+        .agree_btn.active::before {
+            background: url(./img/min_check.png) no-repeat;
+            background-size: 24px;
+        }
+        .agree_btn span {color:#666;}
+        .agree_btn a {color:#999;}
+
+        .full_bx {
+            width: 100%;
+            padding: 16px 20px;
+            position: absolute;
+            bottom: 30px; 
+        }
+        .full_btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 16px 0;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 0.3px;
+            color: #9EA6AC;
+            border-radius: 6px;
+            background: #F2F3F7;
+            transition: all .3s;
+        }
+        .full_btn.active {
+            background-color: #3983A0;
+            color: #fff;
+        }
+    </style>
+</body>
+</html>

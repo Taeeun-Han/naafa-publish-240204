@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./common.css">
+    <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT/fonts/static/woff2/SUIT.css" rel="stylesheet">
+
+</head>
+<body>
+    <!-- 병원 채팅 (이미지) -->
+    <div class="container">
+        <div class="chat_banner"><img src="./img/ico_bot.png">연세 정형외과</div>
+        <div class="inner">
+
+
+        </div>
+    </div>
+    <div class="full_bx">
+        <div class="chat_field">
+            <img src="./img/chat_camera.png">
+            <img src="./img/chat_picture.png">
+            <input type="text" placeholder="메세지를 입력해주세요">
+            <img src="./img/chat_gps.png">
+        </div>
+        <div class="chat_content">
+             <div class="chat_tab">
+                <div><span class="chat_btn active"><img src="./img/ico_img.png">이미지</span><span class="chat_btn"><img src="./img/ico_video.png">동영상</span></div>
+                <div class="chat_all">전체보기</div>
+             </div>
+             <div class="chat_tab_img">
+                <div class="chat_tab_item"><img src="./img/chat_imgs.png"></div>
+                <div class="chat_tab_item"><img src="./img/chat_imgs.png"></div>
+                <div class="chat_tab_item"><img src="./img/chat_imgs.png"></div>
+                <div class="chat_tab_item"><img src="./img/chat_imgs.png"></div>
+                <div class="chat_tab_item"><img src="./img/chat_imgs.png"></div>
+                <div class="chat_tab_item"><img src="./img/chat_imgs.png"></div>
+                <div class="chat_tab_item"><img src="./img/chat_imgs.png"></div>
+             </div>
+        </div>
+    </div>
+
+    <!-- style -->
+    <style>
+        .container {
+            min-height: 100vh;
+        }
+        .inner {
+            padding:0 20px;
+        }
+        .main_color {
+            color:#3983A0;
+        }
+        .chat_banner {
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding: 15px 20px;
+            font-size: 16px;
+            font-weight: 500;
+            color: #333;
+            background: #F2F3F7;
+        }
+        .chat_banner::after {
+            content: '';
+            position: absolute;
+            top: 50%; right: 20px;
+            width: 16px; height: 16px;
+            background: url(./img/Ico_search.svg)no-repeat;
+            background-size: cover;
+            transform: translateY(-50%);
+        }
+        .chat_banner img {
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+        .full_bx {
+            width: 100%;
+            padding: 16px 20px;
+            position: absolute;
+            bottom: 30px; 
+        }
+        .chat_field {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            padding: 16px 15px;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 0.3px;
+            color: #9EA6AC;
+            border-radius: 999px;
+            background: #F2F3F7;
+            transition: all .3s;
+            outline: none;
+            border: 0;
+        }
+        .chat_field input {
+            background:none;
+            border: 0;
+            outline: none;
+            padding-left: 15px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .chat_field input::placeholder {color: #9EA6AC;}
+        .full_btn.active {
+            background-color: #3983A0;
+            color: #fff;
+        }
+        .chat_content {
+            padding: 30px 0px;
+            height: 200px;
+        }
+        .chat_tab {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .chat_btn {
+            position: relative;
+            font-size: 16px;
+            font-weight: 500;
+            color: #9EA6AC;
+        }
+        .chat_btn:first-child {padding-right: 28px;}
+        .chat_btn:first-child::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 0;
+            display: inline-block;
+            width: 1px;
+            height: 15px;
+            margin: 0 15px;
+            background: #CACED8;
+            transform: translateY(-50%);
+        }
+        .chat_btn.active {
+            font-size: 16px;
+            font-weight: 700;
+            color: #333;
+        }
+        .chat_btn img {margin-right: 5px;}
+        .chat_all {
+            font-size: 14px;
+            font-weight: 500;
+            color: #9EA6AC;
+        }
+        .chat_tab_img {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 30px;
+            row-gap: 20px;
+        }
+        .chat_tab_item {
+            width: calc(100% / 3);
+        }
+    </style>
+</body>
+</html>

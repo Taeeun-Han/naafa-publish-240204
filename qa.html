@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./common.css">
+    <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT/fonts/static/woff2/SUIT.css" rel="stylesheet">
+</head>
+<body>
+    <!-- 문의 내역 -->
+    <div class="container">
+        <div class="top_header"><span class="prev"></span>문의 내역</div>
+        <div class="inner bottom_btn">
+            <div class="bx_wrap">
+                <div class="list_layout">
+                    <p class="user_title">문의유형</p>
+                    <input type="text" placeholder="유형을 선택하세요">  
+                </div>
+                <div class="list_layout">
+                    <p class="user_title">제목</p>
+                    <div class="flex_bx">
+                        <input type="text" placeholder="제목을 입력하세요">  
+                    </div>
+                </div>
+                <div class="list_layout">
+                    <p class="user_title">내용</p>
+                    <div class="flex_bx">
+                        <textarea class="bg_textarea" placeholder="내용을 입력하세요"></textarea>
+                    </div>
+                </div>
+                <div class="bx_2_btn other_btn">
+                    <div class="btn bg">취소</div>
+                    <div class="btn active">문의 등록</div>
+                </div>
+            </div>
+        </div>  
+    </div>
+
+    <div class="navi_menu">
+        <div class="navi_btn">
+            <img src="./img/ico_navi_01.png">
+            <p>병원검색</p>
+        </div>
+        <div class="navi_btn">
+            <img src="./img/ico_navi_02.png">
+            <p>방문예약</p>
+        </div>
+        <div class="navi_btn">
+            <img src="./img/ico_navi_03.png">
+            <p>비대면 상담예약</p>
+        </div>
+        <div class="navi_btn">
+            <img src="./img/ico_navi_04.png">
+            <p>커뮤니티</p>
+        </div>
+        <div class="navi_btn">
+            <img src="./img/ico_navi_05.png">
+            <p>마이페이지</p>
+        </div>
+    </div>
+
+     
+    <!-- style -->
+    <style>
+        .container {
+            min-height: 100vh;
+        }
+        .pop_bg {
+            height: 100vh;
+            overflow: hidden;
+        }
+        .pop_bg::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background:#000;
+            opacity: 0.7;
+        }
+        .inner {
+            padding:0 20px;
+        }
+        .navi_bottom {padding-bottom: 100px;}
+        .main_color {
+            color:#3983A0;
+        }
+        .bottom_btn {
+            padding-bottom:120px
+        }
+
+        .top_header {
+            position: relative;
+            padding: 15px 0;
+            font-size: 16px;
+            font-weight: 500;
+            text-align: center;
+            color: #333;
+        }
+        .top_header .prev {
+            position: absolute;
+            top: 50%; left: 20px;
+            height: 15px;
+            width: 7px;
+            background: url(./img/ico_prev.png)no-repeat;
+            background-size: cover;
+            transform: translateY(-50%);
+        }
+
+        .bx_wrap {padding: 20px 0;}
+
+       .list_layout {
+            padding-bottom: 25px;
+       }
+       .list_layout .flex_bx {
+            display: flex;
+            column-gap: 10px;
+       }
+       .list_layout .user_title {
+            margin-bottom: 15px;
+            font-size: 14px;
+            color: #333;
+            font-weight: 600;
+       }
+       .list_layout input {
+            width: 100%;
+            padding: 15px;
+            font-size: 14px;
+            font-weight: 500;
+            box-sizing: border-box;
+            border: 0;
+            outline: none;
+            border-radius: 4px;
+            background: #F2F3F7;
+            color: #333;
+       }
+
+       .bg_textarea {
+            width: 100%;
+            min-height: 200px;
+            padding: 15px;
+            font-size: 14px;
+            font-weight: 500;
+            background: #F2F3F7;
+            border-radius: 4px;
+            outline: 0;
+       }
+       input::placeholder,
+       textarea::placeholder {
+            color: #999;
+        }
+       
+        .navi_menu {
+            position: fixed;
+            bottom: 0;
+            display: flex;
+            width: 100%;
+            padding: 15px 0;
+            border-top: 1px solid #eee;
+            background: #fff;
+        }
+        .navi_menu .navi_btn {
+            flex: 1;
+            text-align: center;
+        }
+        .navi_btn p {
+            margin-top: 10px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #ccc;
+            letter-spacing: -0.48px;
+        }
+
+
+        .other_btn {
+            margin-top: 15px;
+        }
+        .other_btn .btn:first-child {flex:1;}
+        .other_btn .btn:last-child {flex:2;}
+        .bx_2_btn {
+            display: flex;
+            column-gap: 10px;
+        }
+        .bx_2_btn .btn {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 0;
+            font-size: 16px;
+            text-align: center;
+            font-weight: 500;
+            letter-spacing: 0.048px;
+            border-radius: 6px;
+            border: 1px solid #E4E5EB;
+            color: #6D767D;
+        }
+        .bx_2_btn .btn.active {
+            border: 0;
+            color: #fff;
+            background: #3983A0;
+        }
+        .btn.bg {background: #F2F3F7;}
+
+    </style>
+</body>
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./common.css">
+    <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT/fonts/static/woff2/SUIT.css" rel="stylesheet">
+
+</head>
+<body>
+    <div class="bg_grey pop_bg">
+
+        <!-- 커뮤니티 팝업 -->
+        <div class="container">
+            <div class="inner navi_bottom">
+                <div class="community_header">나아파 커뮤니티</div>
+                <div class="view_btn">
+                    <div class="active">전체</div>
+                    <div>TOP 10</div>
+                </div>
+                <div class="community_list">
+                    <div class="community_item">
+                        <img src="./img/community.png">
+                        <div class="community_info">
+                            <div class="community_btn">
+                                <span class="commu_favorite"></span>
+                                <span class="commu_comment"></span>
+                                <span class="commu_share"></span>
+                            </div>
+                            <div class="sns_like"><img src="">좋아요 999+</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="community_list">
+                    <div class="community_item">
+                        <img src="./img/community.png">
+                        <div class="community_info">
+                            <div class="community_btn">
+                                <span class="commu_favorite"></span>
+                                <span class="commu_comment"></span>
+                                <span class="commu_share"></span>
+                            </div>
+                            <div class="sns_like"><img src="">좋아요 999+</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="community_list">
+                    <div class="community_item">
+                        <img src="./img/community.png">
+                        <div class="community_info">
+                            <div class="community_btn">
+                                <span class="commu_favorite"></span>
+                                <span class="commu_comment"></span>
+                                <span class="commu_share"></span>
+                            </div>
+                            <div class="sns_like"><img src="">좋아요 999+</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="layer_pop">
+            <div class="layer_pop_con">
+                <img src="./img/ico_trash.png">
+                <p>댓글을 <b class="main_color">삭제</b> 하시겠습니까?</p>
+                <div class="bx_2_btn">
+                    <div class="btn">취소</div>
+                    <div class="btn active">삭제하기</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="navi_menu">
+            <div class="navi_btn">
+                <img src="./img/ico_navi_01.png">
+                <p>병원검색</p>
+            </div>
+            <div class="navi_btn">
+                <img src="./img/ico_navi_02.png">
+                <p>방문예약</p>
+            </div>
+            <div class="navi_btn">
+                <img src="./img/ico_navi_03.png">
+                <p>비대면 상담예약</p>
+            </div>
+            <div class="navi_btn">
+                <img src="./img/ico_navi_04.png">
+                <p>커뮤니티</p>
+            </div>
+            <div class="navi_btn">
+                <img src="./img/ico_navi_05.png">
+                <p>마이페이지</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- style -->
+    <style>
+        .bg_grey {background: #F2F3F7;}
+        .container {
+            min-height: 100vh;
+        }
+        .inner {
+            padding:0 20px;
+        }
+        .main_color {
+            color:#3983A0;
+        }
+        .pop_bg {
+            height: 100vh;
+            overflow: hidden;
+        }
+        .pop_bg::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background:#000;
+            opacity: 0.7;
+        }
+        .navi_bottom {padding-bottom: 100px;}
+        .community_header {
+            position: relative;
+            padding: 15px 0;
+            font-size: 16px;
+            font-weight: 700;
+            color: #333;
+            border-bottom: 1px solid #ddd;
+        }
+        .community_header::after {
+            content:'';
+            position: absolute;
+            top: 50%; right: 0;
+            width: 17px;
+            height: 17px;
+            background: url(./img/ico_write.png)no-repeat;
+            transform: translateY(-50%);
+        }
+        .view_btn {
+            display: flex;
+            column-gap: 10px;
+            margin: 30px 0 20px;
+        } 
+        .view_btn div {
+            display: inline-block;
+            padding: 8px 15px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #999;
+            border: 1px solid #ddd;
+            background:#fff;
+        }
+        .view_btn div.active {
+            color: #fff;
+            background: #333;
+            border: 0;
+        }
+        .community_list {margin-bottom: 30px;}
+        .community_item {background:#fff;}
+        .community_item img {width:100%;}
+        .community_info {
+            padding: 22px 20px;
+            background:#fff;
+        }
+        .community_btn {
+            display: flex;
+            align-items: center;
+            column-gap: 20px;
+        }
+        .community_btn .commu_favorite {
+            width: 25.575px;
+            height: 22.33px;
+            background: url(./img/ico_favorite.svg)no-repeat;
+        }
+        .community_btn .commu_comment {
+            width: 21.54px;
+            height: 21.54px;
+            background: url(./img/ico_comment.svg)no-repeat;
+            background-size: cover;
+        }
+        .community_btn .commu_share {
+            width: 23.95px;
+            height: 19.89px;
+            background: url(./img/ico_sns.svg)no-repeat;
+            background-size: cover;
+        }
+        .sns_like {
+            margin-top: 22px;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 0.042px;
+            color: #333;
+        }
+        .sns_like::before {
+            content:'';
+            display: inline-block;
+            width: 18.069px;
+            height: 15.789px;
+            margin-right: 5px;
+            vertical-align: sub;
+            background: url(./img/ico_like.svg)no-repeat;
+            background-size: contain;
+        }
+
+        .navi_menu { 
+            position: fixed;
+            bottom: 0;
+            display: flex;
+            width: 100%;
+            padding: 15px 0;
+            border-top: 1px solid #eee;
+            background: #fff;
+        }
+        .navi_menu .navi_btn {
+            flex: 1;
+            text-align: center;
+        }
+        .navi_btn p {
+            margin-top: 10px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #ccc;
+            letter-spacing: -0.48px;
+        }
+        .layer_pop {    
+            position: fixed;  
+            top: 50%;
+            left: 50%;
+            width: 100%;   
+            padding: 20px;
+            transform: translate(-50%,-50%);
+            z-index: 1;
+        }
+        .layer_pop_con {
+            padding: 15px;
+            text-align: center;
+            border-radius: 10px;
+            background:#fff;
+        }
+        .layer_pop_con img {
+            margin: 15px 0 20px;
+        }
+        .layer_pop_con p {
+            margin-bottom: 25px;
+            font-size: 17px;
+            font-weight: 600;
+            color: #333;
+        }
+        .bx_2_btn {
+            display: flex;
+            column-gap: 10px;
+        }
+        .bx_2_btn .btn {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 0;
+            font-size: 16px;
+            text-align: center;
+            font-weight: 500;
+            letter-spacing: 0.048px;
+            border-radius: 6px;
+            border: 1px solid #E4E5EB;
+            color: #6D767D;
+        }
+        .bx_2_btn .btn.active {
+            border: 0;
+            color: #fff;
+            background: #3983A0;
+        }
+    </style>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./common.css">
+    <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT/fonts/static/woff2/SUIT.css" rel="stylesheet">
+</head>
+<body>
+    <!-- 왕진 예약 -->
+    <div class="container">
+        <div class="top_header">왕진 예약</div>
+        <input type="text" class="search_input" placeholder="증상 또는 병원 검색해 주세요">
+        <div class="date_info">
+            <p class="date_bx">23.03.31(금)</p>
+            <p class="gps_bx">신사동</p>
+        </div>
+        <div class="section_line"></div>
+        <div class="inner">
+            <div class="vertical_middle">
+                <img src="./img/ico_help.png">
+                <div class="txt_none">채팅 내역이 없습니다.</div>
+            </div>   
+        </div>  
+    </div>
+    <div class="navi_menu">
+        <div class="navi_btn">
+            <img src="./img/ico_navi_01.png">
+            <p>병원검색</p>
+        </div>
+        <div class="navi_btn">
+            <img src="./img/ico_navi_02.png">
+            <p>방문예약</p>
+        </div>
+        <div class="navi_btn">
+            <img src="./img/ico_navi_03.png">
+            <p>비대면 상담예약</p>
+        </div>
+        <div class="navi_btn">
+            <img src="./img/ico_navi_04.png">
+            <p>커뮤니티</p>
+        </div>
+        <div class="navi_btn">
+            <img src="./img/ico_navi_05.png">
+            <p>마이페이지</p>
+        </div>
+    </div>
+     
+    <!-- style -->
+    <style>
+        .container {
+            min-height: 100vh;
+        }
+        .pop_bg {
+            height: 100vh;
+            overflow: hidden;
+        }
+        .pop_bg::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background:#000;
+            opacity: 0.7;
+        }
+        .inner {
+            padding:0 20px;
+        }
+        .main_color {
+            color:#3983A0;
+        }
+        .bottom_btn {
+            padding-bottom:120px
+        }
+
+        .top_header {
+            position: relative;
+            padding: 15px 0;
+            font-size: 16px;
+            font-weight: 500;
+            text-align: center;
+            color: #333;
+        }
+
+        .navi_menu { 
+            position: fixed;
+            bottom: 0;
+            display: flex;
+            width: 100%;
+            padding: 15px 0;
+            border-top: 1px solid #eee;
+            background: #fff;
+        }
+        .navi_menu .navi_btn {
+            flex: 1;
+            text-align: center;
+        }
+        .navi_btn p {
+            margin-top: 10px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #ccc;
+            letter-spacing: -0.48px;
+        }
+        .search_input  {
+            width: 100%;
+            padding: 15px 40px;
+            font-size: 16px;
+            font-weight: 400;
+            box-sizing: border-box;
+            border: 0;
+            outline: none;
+            border-radius: 4px;
+            border-bottom: 1px solid #eee;
+            background: #fff;
+            color: #333;
+       }
+        input::placeholder,
+        textarea::placeholder {
+            color: #9EA6AC;
+        }
+        .date_info {
+            display: flex;
+            column-gap: 10px;
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .date_info p {
+            display: flex;
+            padding: 9px 15px;
+            font-size: 14px;
+            font-weight: 500;
+            border-radius: 6px;
+            border: 1px solid #DDD;
+            color: #333;
+        }
+        .date_info .date_bx {
+            background:#F2F3F7;
+        }
+        .date_info .date_bx::before {
+            content:'';
+            display: inline-block;
+            width: 16px; height: 16px;
+            vertical-align: sub;
+            margin-right: 5px;
+            background: url(./img/ico_calendar.svg)no-repeat;
+        }
+        .date_info .gps_bx::before {
+            content:'';
+            display: inline-block;
+            width: 16px; height: 16px;
+            vertical-align: sub;
+            margin-right: 5px;
+            background: url(./img/ico_gps.svg)no-repeat;
+        }
+
+               
+       .section_line {
+            padding: 4px 0;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+            background: #F6F6F6;
+       }
+
+       .vertical_middle {   
+            width: 100%;
+            margin-top: 100px;
+            text-align: center;
+        }
+        .vertical_middle img {
+            margin-bottom: 18px;
+        }
+        .txt_none {
+            font-size: 18px;
+            font-weight: 500;
+            color: #999;
+        }
+    </style>
+</body>
+</html>

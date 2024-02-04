@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./common.css">
+    <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT/fonts/static/woff2/SUIT.css" rel="stylesheet">
+</head>
+<body>
+    <!-- 수술부위 선택  -->
+    <div class="container">
+        <div class="inner">
+            <div class="bx_title"><h3>시술 및 수술부위를<br> 선택해 주세요.</h3></div>
+        </div>   
+        <div class="sample_img_bx">
+            <div class="select_img">
+                <div class="samples"><img src="./img/sample.png"></div>
+                <div class="absol icon_chest active"></div>
+                <div class="absol icon_chin"></div>
+                <div class="absol icon_eyes"></div>
+                <div class="absol icon_head"></div>
+                <div class="img_name">샘플이미지</div>
+            </div>
+        </div>
+    </div>
+    <div class="full_bx"><div class="full_btn active">확인</div></div>
+     
+    <!-- style -->
+    <style>
+        .container {
+            min-height: 100vh;
+        }
+        .inner {
+            padding:0 20px;
+        }
+
+        .bx_title {
+            padding-top: 40px;
+        }
+        .bx_title h3 {
+            margin-bottom: 15px;
+            font-size: 26px;
+            font-weight: 700;
+            color: #333;
+        }
+        .bx_title span {
+            font-size: 14px;
+            font-weight: 500;
+            color: #999;
+        }
+        .sample_img_bx {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: end;
+            justify-content: center;
+            padding-bottom: 97px;
+        }
+        .samples img { height: 394px;}
+        .sample_img_bx::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 20px;
+            opacity: 0.5;
+            background: #F5F5F5;
+            filter: blur(4px);
+        }
+        .sample_img_bx .select_img {
+            position: relative;
+        }
+
+        .sample_img_bx .img_name {
+            position: absolute;
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 18px;
+            font-weight: 900;
+            color: #fff;
+        }
+        .sample_img_bx .absol {
+            position: absolute;
+        }
+        .sample_img_bx .absol::after {
+            content:'';
+            display: inline-block;
+            width: 26px; height: 26px;
+            background: url(./img/round_chk.png)no-repeat;
+        }
+        .sample_img_bx .absol.active::after {
+            background: url(./img/round_chk_active.png)no-repeat;
+        }
+        .absol.icon_chest {left: 97px; bottom: 150px;}
+        .absol.icon_chin {left: 117px; bottom: 252px;}
+        .absol.icon_eyes {left: 151px; bottom: 315px;}
+        .absol.icon_head {left: 143px; bottom: 368px;}
+
+        .full_bx {
+            width: 100%;
+            padding: 16px 20px;
+            position: absolute;
+            bottom: 30px; 
+        }
+        .full_btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 16px 0;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 0.3px;
+            color: #9EA6AC;
+            border-radius: 6px;
+            background: #F2F3F7;
+            transition: all .3s;
+        }
+        .full_btn.active {
+            background-color: #3983A0;
+            color: #fff;
+        }
+
+    </style>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./common.css">
+    <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT/fonts/static/woff2/SUIT.css" rel="stylesheet">
+
+</head>
+<body>
+    <!-- 병원 채팅 (내역 없음)  -->
+    <div class="container">
+        <div class="layout_center layout_center_min">
+            <img src="./img/ico_help.png">
+            <div class="txt_none">채팅 내역이 없습니다.</div>
+        </div>      
+        <div class="side_menu">+</div>
+    </div>
+    <div class="navi_menu">
+        <div class="navi_btn">
+            <img src="./img/ico_navi_01.png">
+            <p>병원검색</p>
+        </div>
+        <div class="navi_btn">
+            <img src="./img/ico_navi_02.png">
+            <p>방문예약</p>
+        </div>
+        <div class="navi_btn">
+            <img src="./img/ico_navi_03.png">
+            <p>비대면 상담예약</p>
+        </div>
+        <div class="navi_btn">
+            <img src="./img/ico_navi_04.png">
+            <p>커뮤니티</p>
+        </div>
+        <div class="navi_btn">
+            <img src="./img/ico_navi_05.png">
+            <p>마이페이지</p>
+        </div>
+    </div>
+
+    <!-- style -->
+    <style>
+        .container {
+            min-height: 100vh;
+        }
+        .inner {
+            padding:0 20px;
+        }
+        .main_color {
+            color:#3983A0;
+        }
+        .layout_center {
+            position: absolute;
+            top: 30%;
+            width: 100%;
+            text-align: center;
+        }
+        .layout_center_min {
+            top: 35%;
+        }
+        .layout_center img {
+            margin-bottom: 18px;
+        }
+        .center_title {
+            margin-bottom:20px;
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: 0.066px;
+            color: #333;
+        }
+        .center_txt {
+            margin-bottom: 40px;
+            font-size: 14px;
+            text-align: center;
+            letter-spacing: 0.042px;
+            color: #666;
+        }
+        .txt_none {
+            font-size: 18px;
+            font-weight: 500;
+            color: #999;
+        }
+
+        .pay_btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 14px;
+            font-weight: 700;
+            border-radius: 6px;
+            border: 1px solid #3983A0;
+            background: #FFF;
+            color: #3983A0;
+            box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.06);
+        }
+        .pay_btn::after {
+            content:'';
+            display: inline-block;
+            width: 18px; height: 18px;
+            margin-left: 5px;
+            vertical-align: middle;
+            background: url(./img/ico_add.png)no-repeat;
+        }
+
+        .side_menu {
+            position: fixed;
+            right: 25px;
+            bottom: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 54px;
+            height: 54px;
+            font-size: 33px;
+            color: #fff;
+            background:#3983A0;
+            border-radius: 100%;
+        }
+
+        .navi_menu {
+            position: fixed;
+            bottom: 0;
+            display: flex;
+            width: 100%;
+            padding: 15px 0;
+            border-top: 1px solid #eee;
+            background: #fff;
+        }
+        .navi_menu .navi_btn {
+            flex: 1;
+            text-align: center;
+        }
+        .navi_btn p {
+            margin-top: 10px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #ccc;
+            letter-spacing: -0.48px;
+        }
+    </style>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./common.css">
+    <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT/fonts/static/woff2/SUIT.css" rel="stylesheet">
+
+</head>
+<body>
+    <!-- 병원 채팅 내용 -->
+    <div class="container">
+        <div class="chat_banner"><img src="./img/profile_img.png">연세 정형외과</div>
+        <div class="inner chat_bx">
+            <div class="chat_user">
+                <div class="chat_profile"><img src="./img/chat_profile.png"></div>
+                <div>
+                    <div class="speech">
+                        토요일인 오는 13일은 중국 발해만 부근
+                        에서 서해상으로 이동하는 고기압 영향권
+                        에 들며 내륙을 중심으로 영하권 아침 
+                        기온을 보이겠다.
+                    </div>
+                    <p class="chat_day">오후 7:48</p>
+                </div>  
+            </div>
+
+        </div>
+    </div>
+    <div class="full_bx">
+        <div class="chat_field">
+            <input type="text" placeholder="메세지를 입력해주세요">
+            <img src="./img/chat_gps.png">
+        </div>
+    </div>
+
+    <!-- style -->
+    <style>
+        .container {
+            min-height: 100vh;
+        }
+        .inner {
+            padding:0 20px;
+        }
+        .main_color {
+            color:#3983A0;
+        }
+        .chat_banner {
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding: 15px 20px;
+            font-size: 16px;
+            font-weight: 500;
+            color: #333;
+            background: #F2F3F7;
+        }
+        .chat_banner::after {
+            content: '';
+            position: absolute;
+            top: 50%; right: 20px;
+            width: 16px; height: 16px;
+            background: url(./img/Ico_search.svg)no-repeat;
+            background-size: cover;
+            transform: translateY(-50%);
+        }
+        .chat_banner img {
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+        .full_bx {
+            width: 100%;
+            padding: 16px 20px;
+            position: absolute;
+            bottom: 30px; 
+        }
+        .chat_field {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 10px;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 0.3px;
+            color: #9EA6AC;
+            border-radius: 999px;
+            background: #F2F3F7;
+            transition: all .3s;
+            outline: none;
+            border: 0;
+        }
+        .chat_field input {
+            background:none;
+            border: 0;
+            outline: none;
+            padding-left: 15px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .chat_field input::placeholder {color: #9EA6AC;}
+        .chat_bx {padding-top: 35px;}
+        .chat_user {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        .speech {
+            padding: 15px 22px 15px 15px;
+            font-size: 14px;
+            font-weight: 500;
+            border-radius: 0px 14px 14px 14px;
+            background: #F2F3F7;
+            color: #333;
+        }
+        .chat_day {
+            margin-top: 10px;
+            font-size: 12px;
+            font-weight: 500;
+            color: #999;
+            text-align: end;
+        }
+    </style>
+</body>
+</html>

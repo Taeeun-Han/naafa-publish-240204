@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./common.css">
+    <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT/fonts/static/woff2/SUIT.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- 병원명 검색 -->
+    <div class="container">
+        <div class="inner bottom_btn pop_bg">
+
+            <!-- 하단 팝업 -->
+            <div class="bottom_pop big_pop">
+                <h3>병원명을 입력해 주세요</h3>
+                <input type="text" class="bg_input" placeholder="병원명을 입력해 주세요" />
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        window.onload = function(){
+            document.querySelector('.bottom_pop').classList.add('active');
+        }
+    </script>
+
+    <style>
+        .container {
+            min-height: 100vh;
+        }
+        .inner {
+            padding:0 20px;
+        }
+        .bottom_btn {
+            padding-bottom:120px
+        }
+        .main_color {
+            color:#3983A0;
+        }
+        .pop_bg {
+            height: 100vh;
+            overflow: hidden;
+        }
+        .pop_bg::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background:#000;
+            opacity: 0.7;
+        }
+        
+        .bottom_pop {
+            position:fixed;
+            bottom:-100%; left:0;
+            width:100%;
+            padding:35px 20px 30px;
+            text-align: center;
+            border-radius: 28px 28px 0px 0px;
+            background:#fff;
+            transition: all .6s;
+            z-index: 1;
+        }
+        .bottom_pop.active {bottom:0;}
+        .bottom_pop.big_pop {
+            min-height: 575px;
+        }
+        .bottom_pop h3 {
+            margin-bottom: 35px;
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: -0.054px;
+            color: #333;
+        }
+        .bg_input {
+            width: 100%;
+            padding: 15px;
+            font-size: 14px;
+            border-radius: 4px;
+            border: 0;
+            outline: none;
+            background-color: #F2F3F7 !important;
+            box-sizing: border-box;
+            background:url(./img/Ico_search.svg)no-repeat 95% center;
+        }
+
+        .pop_title {
+            margin:20px 0;
+            font-size: 18px;
+            font-weight: 700;
+        }
+        .pop_txt {
+            font-size: 15px;
+            color: #666;
+        }
+        .pop_bx_title {
+            padding:10px 15px;
+            margin-top: 20px;
+            font-size: 12px;
+            font-weight: 500;
+            border-radius: 6px;
+            border: 1px solid #E4E5EB;
+            color: #999;
+            background: #F2F3F7;
+        }
+        .pop_lay {
+            margin-top: 40px;
+        }
+        .pop_lay .flex_bx {
+            display: flex;
+            column-gap: 10px;
+        }
+        .pop_tit {
+            margin-bottom: 18px;
+            font-size: 16px;
+            font-weight: 700;
+            text-align: start;
+        }
+        .pop_btn {
+            flex:1;
+            padding:15px 0;
+            font-size: 16px;
+            font-weight: 500;
+            border-radius: 6px;
+            border: 1px solid #E4E5EB;
+            background: #FFF;
+        }
+        .pop_btn.share_btn::before {
+            content:'';
+            display: inline-block;
+            width:18px; height:18px;
+            margin-right: 6px;
+            vertical-align: middle;
+            background: url(./img/ico_share.png)no-repeat;
+        }
+        .pop_btn.kakao_btn::before {
+            content:'';
+            display: inline-block;
+            width:22px; height:22px;
+            margin-right: 6px;
+            vertical-align: middle;
+            background: url(./img/ico_kakao.png)no-repeat;
+        }
+    </style>
+</body>
+</html>

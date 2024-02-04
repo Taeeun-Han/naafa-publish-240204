@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./common.css">
+    <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT/fonts/static/woff2/SUIT.css" rel="stylesheet">
+
+</head>
+<body>
+    <div class="bg_grey pop_bg">
+
+        <!-- 커뮤니티 댓글 팝업 -->
+        <div class="container">
+            <div class="inner navi_bottom">
+                <div class="community_header">나아파 커뮤니티</div>
+                <div class="view_btn">
+                    <div class="active">전체</div>
+                    <div>TOP 10</div>
+                </div>
+                <div class="community_list">
+                    <div class="community_item">
+                        <img src="./img/community.png">
+                        <div class="community_info">
+                            <div class="community_btn">
+                                <span class="commu_favorite"></span>
+                                <span class="commu_comment"></span>
+                                <span class="commu_share"></span>
+                            </div>
+                            <div class="sns_like"><img src="">좋아요 999+</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="community_list">
+                    <div class="community_item">
+                        <img src="./img/community.png">
+                        <div class="community_info">
+                            <div class="community_btn">
+                                <span class="commu_favorite"></span>
+                                <span class="commu_comment"></span>
+                                <span class="commu_share"></span>
+                            </div>
+                            <div class="sns_like"><img src="">좋아요 999+</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="community_list">
+                    <div class="community_item">
+                        <img src="./img/community.png">
+                        <div class="community_info">
+                            <div class="community_btn">
+                                <span class="commu_favorite"></span>
+                                <span class="commu_comment"></span>
+                                <span class="commu_share"></span>
+                            </div>
+                            <div class="sns_like"><img src="">좋아요 999+</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="layer_pop">
+            <div class="layer_pop_bx">
+                <div class="layer_comment_total"><b class="main_color">댓글</b> 648,312 건</div>
+                <div class="layer_height">
+                    <div class="layer_comment">
+                        <p class="nickname">서후바라기</p>
+                        <div class="layer_comment_txt">화요일인 14일에도 전국 곳곳 아침 기운이 영하로 떨어져 추운 날씨가 이어진다.</div>
+                        <div class="layer_comment_btn">
+                            <b class="main_color btn_comment">답글 4</b>
+                            <b class="btn_remove">삭제</b>
+                        </div>
+                    </div>
+                    <div class="layer_comment">
+                        <p class="nickname">서후바라기</p>
+                        <div class="layer_comment_txt">화요일인 14일에도 전국 곳곳 아침 기운이 영하로 떨어져 추운 날씨가 이어진다.</div>
+                        <div class="layer_comment_btn">
+                            <b class="main_color btn_comment">답글 4</b>
+                            <b class="btn_remove">삭제</b>
+                        </div>
+                    </div>
+                </div>
+                <div class="layer_input">
+                    <input type="text" placeholder="댓글을 입력해 주세요">
+                    <button>입력</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="navi_menu">
+            <div class="navi_btn">
+                <img src="./img/ico_navi_01.png">
+                <p>병원검색</p>
+            </div>
+            <div class="navi_btn">
+                <img src="./img/ico_navi_02.png">
+                <p>방문예약</p>
+            </div>
+            <div class="navi_btn">
+                <img src="./img/ico_navi_03.png">
+                <p>비대면 상담예약</p>
+            </div>
+            <div class="navi_btn">
+                <img src="./img/ico_navi_04.png">
+                <p>커뮤니티</p>
+            </div>
+            <div class="navi_btn">
+                <img src="./img/ico_navi_05.png">
+                <p>마이페이지</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- style -->
+    <style>
+        .bg_grey {background: #F2F3F7;}
+        .container {
+            min-height: 100vh;
+        }
+        .inner {
+            padding:0 20px;
+        }
+        .main_color {
+            color:#3983A0;
+        }
+        .pop_bg {
+            height: 100vh;
+            overflow: hidden;
+        }
+        .pop_bg::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background:#000;
+            opacity: 0.7;
+        }
+        .navi_bottom {padding-bottom: 100px;}
+        .community_header {
+            position: relative;
+            padding: 15px 0;
+            font-size: 16px;
+            font-weight: 700;
+            color: #333;
+            border-bottom: 1px solid #ddd;
+        }
+        .community_header::after {
+            content:'';
+            position: absolute;
+            top: 50%; right: 0;
+            width: 17px;
+            height: 17px;
+            background: url(./img/ico_write.png)no-repeat;
+            transform: translateY(-50%);
+        }
+        .view_btn {
+            display: flex;
+            column-gap: 10px;
+            margin: 30px 0 20px;
+        } 
+        .view_btn div {
+            display: inline-block;
+            padding: 8px 15px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #999;
+            border: 1px solid #ddd;
+            background:#fff;
+        }
+        .view_btn div.active {
+            color: #fff;
+            background: #333;
+            border: 0;
+        }
+        .community_list {margin-bottom: 30px;}
+        .community_item {background:#fff;}
+        .community_item img {width:100%;}
+        .community_info {
+            padding: 22px 20px;
+            background:#fff;
+        }
+        .community_btn {
+            display: flex;
+            align-items: center;
+            column-gap: 20px;
+        }
+        .community_btn .commu_favorite {
+            width: 25.575px;
+            height: 22.33px;
+            background: url(./img/ico_favorite.svg)no-repeat;
+        }
+        .community_btn .commu_comment {
+            width: 21.54px;
+            height: 21.54px;
+            background: url(./img/ico_comment.svg)no-repeat;
+            background-size: cover;
+        }
+        .community_btn .commu_share {
+            width: 23.95px;
+            height: 19.89px;
+            background: url(./img/ico_sns.svg)no-repeat;
+            background-size: cover;
+        }
+        .sns_like {
+            margin-top: 22px;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 0.042px;
+            color: #333;
+        }
+        .sns_like::before {
+            content:'';
+            display: inline-block;
+            width: 18.069px;
+            height: 15.789px;
+            margin-right: 5px;
+            vertical-align: sub;
+            background: url(./img/ico_like.svg)no-repeat;
+            background-size: contain;
+        }
+
+        .navi_menu { 
+            position: fixed;
+            bottom: 0;
+            display: flex;
+            width: 100%;
+            padding: 15px 0;
+            border-top: 1px solid #eee;
+            background: #fff;
+        }
+        .navi_menu .navi_btn {
+            flex: 1;
+            text-align: center;
+        }
+        .navi_btn p {
+            margin-top: 10px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #ccc;
+            letter-spacing: -0.48px;
+        }
+
+        .layer_pop {    
+            position: fixed;  
+            top: 50%;
+            left: 50%;
+            width: 100%;   
+            padding: 20px;
+            transform: translate(-50%,-50%);
+            z-index: 1;
+        }
+        .layer_pop_bx {
+            border-radius: 10px;
+            background:#fff;
+        }
+        .layer_height {
+            height: 450px;
+            overflow-y: scroll;
+        }
+        .layer_pop_bx .layer_comment_total {
+            padding: 25px 0px;
+            margin: 0 20px;
+            font-size: 16px;
+            border-bottom: 1px solid #eee;
+        }
+        .layer_pop_bx .layer_comment {
+            padding: 25px 0px;
+            margin: 0 20px;
+            border-bottom: 1px solid #eee;
+        }        
+        .layer_pop_bx .nickname {
+            margin-bottom: 13px;
+            font-size: 14px;
+            font-weight: 700;
+            color: #999;
+        }
+        .layer_pop_bx .layer_comment_txt {
+            font-size: 16px;
+            font-weight: 500;
+            color: #333;
+        }
+        .layer_pop_bx .layer_comment_btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        .layer_pop_bx .btn_comment {font-weight: 700;}
+        .layer_pop_bx .btn_comment::before {
+            content:'';
+            display: inline-block;
+            width: 15px; height: 13px;
+            margin-right: 5px;
+            vertical-align: sub;
+            background: url(./img/ico_talk.svg)no-repeat;
+        }
+        .layer_pop_bx .btn_remove {
+            font-weight: 400;
+            color: #999;
+        }
+        .layer_pop_bx .btn_remove::before {
+            content:'';
+            display: inline-block;
+            width: 13px; height: 15px;
+            margin-right: 5px;
+            vertical-align: sub;
+            background: url(./img/ico_remove.svg)no-repeat;
+        }
+        .layer_input {
+            display: flex;
+            padding: 10px;
+            border-radius: 0px 0px 10px 10px;
+            background: #F2F3F7;
+        }
+        .layer_input input {
+            flex: 1;
+            font-size: 16px;
+            padding: 10px;
+            background:#F2F3F7;
+            border: 0;
+            outline: none;
+        }
+        .layer_input input::placeholder {
+            color: #9EA6AC;
+        }
+        .layer_input button {
+            border: 0;
+            outline: none;
+            padding: 9px 18px;
+            font-size: 16px;
+            font-weight: 500;
+            border-radius: 6px;
+            color: #fff;
+            background: #CACED8;
+        }
+    </style>
+</body>
+</html>
